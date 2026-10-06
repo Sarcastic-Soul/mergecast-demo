@@ -2,4 +2,5 @@
 
 
 def parse_csv(text: str, sep: str = ",") -> list[list[str]]:
-    return [line.split(sep) for line in text.splitlines()]
+    """Split text into rows of fields, skipping blank lines."""
+    return [line.split(sep) for line in text.splitlines() if line.strip()]
